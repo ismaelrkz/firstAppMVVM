@@ -9,6 +9,5 @@ import UIKit
 
 class TestPostCardCollectionViewScreen: UIView {
 
-//teste em produção
 
 }

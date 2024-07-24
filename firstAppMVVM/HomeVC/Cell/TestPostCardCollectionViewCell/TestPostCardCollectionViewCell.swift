@@ -9,4 +9,6 @@ import UIKit
 
 class TestPostCardCollectionViewCell: UICollectionViewCell {
     
+    //teste em produção
+    
 }
