@@ -11,4 +11,6 @@ class TestPostCollectionViewCell: UICollectionViewCell {
     
     static let identifier: String = "TestPostCardCollectionViewCell"
     
+    //inicio produção 29jul24
+    
 }
