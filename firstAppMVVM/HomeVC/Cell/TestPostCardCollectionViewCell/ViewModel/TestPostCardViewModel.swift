@@ -9,4 +9,12 @@ import UIKit
 
 class TestPostCardViewModel {
 
+    private var listPost: [Posts]
+    
+    init(listPost: [Posts]) {
+     
+        self.listPost = listPost
+        
+    }
+    
 }

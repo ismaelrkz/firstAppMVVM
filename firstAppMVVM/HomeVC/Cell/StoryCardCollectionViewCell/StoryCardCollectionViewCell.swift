@@ -9,7 +9,7 @@ import UIKit
 
 class StoryCardCollectionViewCell: UICollectionViewCell {
     
-    var homeViewModel: HomeViewModel = HomeViewModel()
+//    var homeViewModel: HomeViewModel = HomeViewModel() // por qual motivo temos essa instância aqui?
     
     private var screen: StoryCardCollectionViewCellScreen = StoryCardCollectionViewCellScreen()
     

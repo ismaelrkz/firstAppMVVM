@@ -31,6 +31,12 @@ class HomeVC: UIViewController {
         homeScreen?.settingsProtocolCollectionView(delegate: self, dataSource: self)
         
     }
+    #warning("Método shouldShowStoryCardCell")
+    private func shouldShowStoryCardCell(at indexPath: IndexPath) -> Bool {
+        
+        return indexPath.row % 2 == 0
+        
+    }
 
 
 }
@@ -44,6 +50,9 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
     }
     // Este método retorna uma célula configurada para exibição no indexPath especificado. Aqui você configura a célula com os dados apropriados antes de retorná-la.
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        /*
+        
         // dequeueReusableCell faz a reutilização das células.
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StoryCardCollectionViewCell.identifier, for: indexPath) as? StoryCardCollectionViewCell
         // esse é o momento que populamos a cell com os dados do array.
@@ -52,6 +61,39 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
         cell?.setupCell(listStory: viewModel.getListStory)
         
         return cell ?? UICollectionViewCell() // caso cell seja nil será passado uma cell vazia.
+         
+         */
+        
+        
+        #warning("if else shouldShowStoryCardCell")
+         if shouldShowStoryCardCell(at: indexPath) {
+             
+             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StoryCardCollectionViewCell.identifier, for: indexPath) as? StoryCardCollectionViewCell else {
+                 
+                 return UICollectionViewCell()
+         
+             }
+         
+             cell.setupCell(listStory: viewModel.getListStory)
+             
+             return cell
+         
+         } else {
+             
+             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TestPostCardCollectionViewCell.identifier, for: indexPath) as? TestPostCardCollectionViewCell else {
+         
+                 return UICollectionViewCell()
+         
+             }
+         
+             #warning("setupCell - getListPost")
+             cell.setupCell(listPost: viewModel.getListPost)
+             
+             return cell
+             
+         }
+         
+         
         
     }
     // Este método determina o tamanho de cada item na collectionView para o indexPath especificado.

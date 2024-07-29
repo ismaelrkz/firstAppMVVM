@@ -18,16 +18,30 @@ class HomeViewModel {
     Stories(image: "img4", userName: "Samuel"),
     Stories(image: "img5", userName: "Ariana"),
     Stories(image: "img6", userName: "Puggy"),
-    Stories(image: "img7", userName: "Dheera"),
+    Stories(image: "img7", userName: "Dheera")
     
+    ]
+
+    private var Post = [
+        
+        Posts(userImage: "", userName: "", imagePost: ""),
+        Posts(userImage: "", userName: "", imagePost: ""),
+        Posts(userImage: "", userName: "", imagePost: ""),
+        Posts(userImage: "", userName: "", imagePost: ""),
+        Posts(userImage: "", userName: "", imagePost: ""),
+        Posts(userImage: "", userName: "", imagePost: ""),
+        Posts(userImage: "", userName: "", imagePost: "")
+        
     ]
     
     // array público encapsulado para acesso fora da classe
     // { ... } -> getter implícito é um bloco de código que retorna um valor
     // nesse caso o valor é a propriedade Story que é do tipo Stories
     public var getListStory: [Stories] { Story }
+    #warning("array getListPost (VAZIO)")
+    public var getListPost: [Posts] { Post }
     
-    public var numberOfItems: Int { return 1 } //será configurado um array aqui posteriormente???
+    public var numberOfItems: Int { return 2 } //será configurado um array aqui posteriormente???
     
     // O indexPath: IndexPath é um índice que representa a posição do item dentro da coleção.
     // O frame: CGRect é um retângulo que representa a área disponível para o item.
@@ -39,7 +53,7 @@ class HomeViewModel {
         // Para todos os outros itens (índice diferente de 0):
         } else {
             // Retorna um tamanho onde a largura é a largura total do frame menos 120 e a altura é a altura completa do frame.
-            return CGSize(width: frame.width - 120, height: frame.height)
+            return CGSize(width: frame.width - 135, height: frame.height)
             
         }
         

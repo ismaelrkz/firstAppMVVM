@@ -9,4 +9,6 @@ import UIKit
 
 class TestPostCollectionViewCell: UICollectionViewCell {
     
+    static let identifier: String = "TestPostCardCollectionViewCell"
+    
 }
