@@ -26,7 +26,7 @@ class StoryCardViewModel {
     // propriedade que irá retornar o número de itens dentro do array listStory
     public var numberOfItems: Int { listStory.count }
     // método responsável por retornar um objeto Stories específico do array listStory com base no índice fornecido pelo indexPath.
-    // o método irá 
+    // o método irá fornecer os dados armazenados em listStory para a célula
     func loadCurrentStory(indexPath: IndexPath) -> Stories {
         
         listStory[indexPath.row]

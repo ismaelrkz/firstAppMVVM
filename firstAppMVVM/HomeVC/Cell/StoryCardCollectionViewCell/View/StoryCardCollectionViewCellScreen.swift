@@ -75,8 +75,8 @@ class StoryCardCollectionViewCellScreen: UIView {
         
         NSLayoutConstraint.activate([
             
-            cardView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 15),
-            cardView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -15),
+            cardView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 5),
+            cardView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -5),
             cardView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
             cardView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
             

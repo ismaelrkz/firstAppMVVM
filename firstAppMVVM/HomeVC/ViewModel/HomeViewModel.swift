@@ -24,13 +24,12 @@ class HomeViewModel {
 
     private var Post = [
         
-        Posts(userImage: "", userName: "", imagePost: ""),
-        Posts(userImage: "", userName: "", imagePost: ""),
-        Posts(userImage: "", userName: "", imagePost: ""),
-        Posts(userImage: "", userName: "", imagePost: ""),
-        Posts(userImage: "", userName: "", imagePost: ""),
-        Posts(userImage: "", userName: "", imagePost: ""),
-        Posts(userImage: "", userName: "", imagePost: "")
+        Posts(userImage: "img2", userName: "Jack", imagePost: "img8JackPost"),
+        Posts(userImage: "img3", userName: "Carolina", imagePost: "img9CarolinaPost"),
+        Posts(userImage: "img4", userName: "Samuel", imagePost: "img10SamuelPost"),
+        Posts(userImage: "img5", userName: "Ariana", imagePost: "img11ArianaPost"),
+        Posts(userImage: "img6", userName: "Puggy", imagePost: "img12PuggyPost"),
+        Posts(userImage: "img7", userName: "Dheera", imagePost: "img13DheeraPost")
         
     ]
     
@@ -38,7 +37,7 @@ class HomeViewModel {
     // { ... } -> getter implícito é um bloco de código que retorna um valor
     // nesse caso o valor é a propriedade Story que é do tipo Stories
     public var getListStory: [Stories] { Story }
-    #warning("array getListPost (VAZIO)")
+    
     public var getListPost: [Posts] { Post }
     
     public var numberOfItems: Int { return 2 } //será configurado um array aqui posteriormente???
@@ -53,7 +52,7 @@ class HomeViewModel {
         // Para todos os outros itens (índice diferente de 0):
         } else {
             // Retorna um tamanho onde a largura é a largura total do frame menos 120 e a altura é a altura completa do frame.
-            return CGSize(width: frame.width - 135, height: frame.height)
+            return CGSize(width: frame.width - 120, height: frame.height)
             
         }
         

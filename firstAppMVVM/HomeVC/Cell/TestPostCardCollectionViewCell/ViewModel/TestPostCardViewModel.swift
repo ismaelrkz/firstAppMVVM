@@ -17,4 +17,12 @@ class TestPostCardViewModel {
         
     }
     
+    public var numberOfItems: Int { listPost.count }
+    
+    func loadCurrentPost(indexPath: IndexPath) -> Posts {
+        
+        listPost[indexPath.row]
+        
+    }
+    
 }

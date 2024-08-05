@@ -13,9 +13,7 @@ class TestPostCardCollectionViewScreen: UIView {
         
         let view = UIView()
         
-        view.backgroundColor = UIColor.white
-        view.layer.cornerRadius = 15
-        view.setCardShadow()
+        view.backgroundColor = UIColor.clear
         
         view.translatesAutoresizingMaskIntoConstraints = false
         
@@ -41,7 +39,12 @@ class TestPostCardCollectionViewScreen: UIView {
         
     }()
     
-    // criar protocolos delegate & dataSource para a collectionView
+    public func settingsProtocolCollectionView(delegate: UICollectionViewDelegate, dataSource: UICollectionViewDataSource) {
+        
+        collectionView.delegate = delegate
+        collectionView.dataSource = dataSource
+        
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -66,8 +69,8 @@ class TestPostCardCollectionViewScreen: UIView {
         
         NSLayoutConstraint.activate([
             
-            cardView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 15),
-            cardView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -15),
+            cardView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 0),
+            cardView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: 0),
             cardView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
             cardView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
             

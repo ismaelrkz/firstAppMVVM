@@ -11,7 +11,7 @@ class TestPostCardCollectionViewCell: UICollectionViewCell {
     
     private var screen: TestPostCardCollectionViewScreen = TestPostCardCollectionViewScreen()
     
-    private var viewModel: TestPostCardViewModel? //por qual motivo optional?
+    private var viewModel: TestPostCardViewModel?
     
     static let identifier: String = "TestPostCardCollectionViewCell"
     
@@ -19,6 +19,7 @@ class TestPostCardCollectionViewCell: UICollectionViewCell {
         super.init(frame: frame)
         
         settingsScreen()
+        screen.settingsProtocolCollectionView(delegate: self, dataSource: self)
         
     }
     
@@ -43,4 +44,30 @@ class TestPostCardCollectionViewCell: UICollectionViewCell {
     
 }
 
-// assinar protocolos da célula que irá dentro da collection da classe atual.
+extension TestPostCardCollectionViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        return viewModel?.numberOfItems ?? 0
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        guard let viewModel = viewModel else { return UICollectionViewCell() }
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TestPostCollectionViewCell.identifier, for: indexPath) as? TestPostCollectionViewCell
+        
+        cell?.setupCell(data: viewModel.loadCurrentPost(indexPath: indexPath), indexPath: indexPath)
+        
+        return cell ?? UICollectionViewCell()
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        return CGSize.init(width: collectionView.frame.width, height: 400)
+        
+    }
+    
+}
