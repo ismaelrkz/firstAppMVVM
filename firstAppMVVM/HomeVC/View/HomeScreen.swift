@@ -26,7 +26,6 @@ class HomeScreen: UIView {
         
         // definimos .self para informar o tipo da classe
         cv.register(StoryCardCollectionViewCell.self, forCellWithReuseIdentifier: StoryCardCollectionViewCell.identifier)
-        cv.register(TestPostCardCollectionViewCell.self, forCellWithReuseIdentifier: TestPostCardCollectionViewCell.identifier)
         
         return cv
         

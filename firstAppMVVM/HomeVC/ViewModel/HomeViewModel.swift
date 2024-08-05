@@ -22,23 +22,11 @@ class HomeViewModel {
     
     ]
 
-    private var Post = [
-        
-        Posts(userImage: "img2", userName: "Jack", imagePost: "img8JackPost"),
-        Posts(userImage: "img3", userName: "Carolina", imagePost: "img9CarolinaPost"),
-        Posts(userImage: "img4", userName: "Samuel", imagePost: "img10SamuelPost"),
-        Posts(userImage: "img5", userName: "Ariana", imagePost: "img11ArianaPost"),
-        Posts(userImage: "img6", userName: "Puggy", imagePost: "img12PuggyPost"),
-        Posts(userImage: "img7", userName: "Dheera", imagePost: "img13DheeraPost")
-        
-    ]
     
     // array público encapsulado para acesso fora da classe
     // { ... } -> getter implícito é um bloco de código que retorna um valor
     // nesse caso o valor é a propriedade Story que é do tipo Stories
     public var getListStory: [Stories] { Story }
-    
-    public var getListPost: [Posts] { Post }
     
     public var numberOfItems: Int { return 2 } //será configurado um array aqui posteriormente???
     
