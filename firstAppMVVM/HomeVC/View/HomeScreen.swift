@@ -21,10 +21,12 @@ class HomeScreen: UIView {
         // translatesAutoresizingMaskIntoConstraints definida como false irá permitir o uso de autoLayout das constraints.
         cv.translatesAutoresizingMaskIntoConstraints = false
         cv.showsHorizontalScrollIndicator = false
-        cv.backgroundColor = UIColor.clear // testeTeste
+        cv.backgroundColor = UIColor.clear
+        cv.isScrollEnabled = false
         
         // definimos .self para informar o tipo da classe
         cv.register(StoryCardCollectionViewCell.self, forCellWithReuseIdentifier: StoryCardCollectionViewCell.identifier)
+        cv.register(TestPostCardCollectionViewCell.self, forCellWithReuseIdentifier: TestPostCardCollectionViewCell.identifier)
         
         return cv
         

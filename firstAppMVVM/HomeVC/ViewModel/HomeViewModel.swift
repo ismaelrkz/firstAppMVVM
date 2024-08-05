@@ -18,8 +18,19 @@ class HomeViewModel {
     Stories(image: "img4", userName: "Samuel"),
     Stories(image: "img5", userName: "Ariana"),
     Stories(image: "img6", userName: "Puggy"),
-    Stories(image: "img7", userName: "Dheera"),
+    Stories(image: "img7", userName: "Dheera")
     
+    ]
+
+    private var Post = [
+        
+        Posts(userImage: "img2", userName: "Jack", imagePost: "img8JackPost"),
+        Posts(userImage: "img3", userName: "Carolina", imagePost: "img9CarolinaPost"),
+        Posts(userImage: "img4", userName: "Samuel", imagePost: "img10SamuelPost"),
+        Posts(userImage: "img5", userName: "Ariana", imagePost: "img11ArianaPost"),
+        Posts(userImage: "img6", userName: "Puggy", imagePost: "img12PuggyPost"),
+        Posts(userImage: "img7", userName: "Dheera", imagePost: "img13DheeraPost")
+        
     ]
     
     // array público encapsulado para acesso fora da classe
@@ -27,7 +38,9 @@ class HomeViewModel {
     // nesse caso o valor é a propriedade Story que é do tipo Stories
     public var getListStory: [Stories] { Story }
     
-    public var numberOfItems: Int { return 1 } //será configurado um array aqui posteriormente???
+    public var getListPost: [Posts] { Post }
+    
+    public var numberOfItems: Int { return 2 } //será configurado um array aqui posteriormente???
     
     // O indexPath: IndexPath é um índice que representa a posição do item dentro da coleção.
     // O frame: CGRect é um retângulo que representa a área disponível para o item.

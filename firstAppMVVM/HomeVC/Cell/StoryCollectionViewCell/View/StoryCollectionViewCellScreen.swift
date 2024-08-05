@@ -12,10 +12,10 @@ class StoryCollectionViewCellScreen: UIView {
     lazy var profileImageView: UIImageView = {
         
         let image = UIImageView()
+        
         image.contentMode = .scaleAspectFill
         image.layer.cornerRadius = 35
         image.clipsToBounds = true
-        
         image.translatesAutoresizingMaskIntoConstraints = false
         
         return image
@@ -30,7 +30,6 @@ class StoryCollectionViewCellScreen: UIView {
         button.imageView?.tintColor = .blue
         button.backgroundColor = .white
         button.layer.cornerRadius = 12.5
-
         button.translatesAutoresizingMaskIntoConstraints = false
         
         return button
@@ -41,9 +40,9 @@ class StoryCollectionViewCellScreen: UIView {
     lazy var userNameLabel: UILabel = {
         
         let label = UILabel()
+        
         label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
-        
         label.translatesAutoresizingMaskIntoConstraints = false
         
         return label
