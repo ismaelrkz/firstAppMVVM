@@ -21,14 +21,23 @@ class HomeViewModel {
     Stories(image: "img7", userName: "Dheera")
     
     ]
-
+    
+    private var posts = [
+        
+        Posts(profileName: "img2", userName: "Jack", postImage: "post1"),
+        Posts(profileName: "img3", userName: "Samuel", postImage: "post2"),
+        Posts(profileName: "img4", userName: "Carolina", postImage: "post3"),
+        Posts(profileName: "img6", userName: "Puggy", postImage: "post4")
+    ]
+    
+    public var getListPosts: [Posts] { posts }
     
     // array público encapsulado para acesso fora da classe
     // { ... } -> getter implícito é um bloco de código que retorna um valor
     // nesse caso o valor é a propriedade Story que é do tipo Stories
     public var getListStory: [Stories] { Story }
     
-    public var numberOfItems: Int { return 2 } //será configurado um array aqui posteriormente???
+    public var numberOfItems: Int { return 1 } // !!! será configurado um array aqui posteriormente? !!!
     
     // O indexPath: IndexPath é um índice que representa a posição do item dentro da coleção.
     // O frame: CGRect é um retângulo que representa a área disponível para o item.
