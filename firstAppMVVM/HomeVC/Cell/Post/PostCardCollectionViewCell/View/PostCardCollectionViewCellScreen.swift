@@ -18,7 +18,7 @@ class PostCardCollectionViewCellScreen: UIView {
         cv.translatesAutoresizingMaskIntoConstraints = false
         cv.showsVerticalScrollIndicator = false
         cv.backgroundColor = .clear
-        // TO DO: Register cell // criar célula com os elementos do post
+        cv.register(PostCollectionViewCell.self, forCellWithReuseIdentifier: PostCollectionViewCell.identifier)
         
         return cv
         

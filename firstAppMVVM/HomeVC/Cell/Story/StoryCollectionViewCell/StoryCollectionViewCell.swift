@@ -32,7 +32,7 @@ class StoryCollectionViewCell: UICollectionViewCell {
         screen.pin(to: contentView) // o método pin irá configurar a área ocupada dentro da contentView.
     
     }
-    // este método configura uma célula de exibição UICollectionViewCell com os dados fornecidos e ajusta a visibilidade de um botão com base na posição da célula.
+    // este método configura uma célula de exibição UICollectionViewCell com os dados fornecidos e ajusta a visibilidade de um botão com base na posição da célula no indexPath.
     public func setupCell(data: Stories, indexPath: IndexPath) {
         // Atribui as propriedades do objeto data aos elementos profileImageView e userNameLabel.
         // Atribuímos o nome da imagem e do usuário aos elementos.

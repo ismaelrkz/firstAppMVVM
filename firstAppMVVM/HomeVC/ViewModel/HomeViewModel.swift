@@ -24,10 +24,10 @@ class HomeViewModel {
     
     private var posts = [
         
-        Posts(profileName: "img2", userName: "Jack", postImage: "post1"),
-        Posts(profileName: "img3", userName: "Samuel", postImage: "post2"),
-        Posts(profileName: "img4", userName: "Carolina", postImage: "post3"),
-        Posts(profileName: "img6", userName: "Puggy", postImage: "post4")
+        Posts(profileImage: "img2", userName: "Jack", postImage: "post1"),
+        Posts(profileImage: "img3", userName: "Samuel", postImage: "post2"),
+        Posts(profileImage: "img4", userName: "Carolina", postImage: "post3"),
+        Posts(profileImage: "img6", userName: "Puggy", postImage: "post4")
     ]
     
     public var getListPosts: [Posts] { posts }
@@ -37,7 +37,7 @@ class HomeViewModel {
     // nesse caso o valor é a propriedade Story que é do tipo Stories
     public var getListStory: [Stories] { Story }
     
-    public var numberOfItems: Int { return 1 } // !!! será configurado um array aqui posteriormente? !!!
+    public var numberOfItems: Int { return 2 }
     
     // O indexPath: IndexPath é um índice que representa a posição do item dentro da coleção.
     // O frame: CGRect é um retângulo que representa a área disponível para o item.

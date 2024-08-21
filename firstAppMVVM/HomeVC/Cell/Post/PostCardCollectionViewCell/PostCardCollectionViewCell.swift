@@ -53,7 +53,13 @@ extension PostCardCollectionViewCell: UICollectionViewDelegate, UICollectionView
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        return UICollectionViewCell()
+        guard let viewModel = viewModel else { return UICollectionViewCell() }
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PostCollectionViewCell.identifier, for: indexPath) as? PostCollectionViewCell
+        
+        cell?.setupCell(data: viewModel.loadCurrentPost(indexPath: indexPath))
+        
+        return cell ?? UICollectionViewCell()
         
     }
     

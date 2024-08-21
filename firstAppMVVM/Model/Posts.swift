@@ -9,7 +9,7 @@ import Foundation
 
 struct Posts {
     
-    let profileName: String
+    let profileImage: String
     let userName: String
     let postImage: String
     
